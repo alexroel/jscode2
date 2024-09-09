@@ -1,0 +1,47 @@
+---
+import SectionLayout from "../../../layouts/SectionLayout.astro";
+const posts = await Astro.glob("./../01-intro-js/*.md");
+
+const title = "Introducción a JavaScript";
+---
+
+<SectionLayout title = {title}>
+    <div class="py-5">
+        <h1>{title}</h1>
+
+        <p class="fs-6">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
+            fugit qui optio repellendus deserunt quia beatae commodi
+            asperiores quasi hic vero quibusdam maxime doloremque, eos unde
+            sequi quam ad itaque?
+        </p>
+
+        <ol class="list-group list-group-numbered py-3">
+            {
+                posts.map((post) => (
+                    <li class="list-group-item fs-6">
+                        <a href={post.url}>
+                            {post.frontmatter.title || post.url}
+                        </a>
+                    </li>
+                ))
+            }
+        </ol>
+    </div>
+</SectionLayout>
+
+<style>
+    .list-group-item{
+        background-color: transparent;
+    }
+
+    a{
+        text-decoration: none;
+        margin-left: 5px;
+        color: var(--color-500);
+    }
+
+    a:hover{
+        color: var(--color-main);
+    }
+</style>
