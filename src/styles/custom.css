@@ -45,25 +45,62 @@
 }
 
 @media (min-width: 72rem) {
-    .right-sidebar:where(.astro-67yu43on){
+    .right-sidebar:where(.astro-67yu43on) {
         width: auto;
         right: 0;
     }
 }
 
-.content-panel:where(.astro-7nkwcw3z) + .content-panel:where(.astro-7nkwcw3z){
+.content-panel:where(.astro-7nkwcw3z)+.content-panel:where(.astro-7nkwcw3z) {
     border-top: none;
 }
 
-.site-title:where(.astro-m46x6ez3){
+.site-title:where(.astro-m46x6ez3) {
     gap: 10px;
     font-weight: 700;
     font-size: 27px;
 }
 
-a:where(.astro-wy4te6ga){
+a:where(.astro-wy4te6ga) {
     color: var(--sl-color-gray-1);
 }
 
-svg:where(.astro-c6vsoqas){
+svg:where(.astro-c6vsoqas) {}
+
+.hero:where(.astro-jbfsktt5){
+    display: none;
+}
+
+/* Mis estilos
+============================================*/
+
+
+.gradient-text {
+    font-size: 48px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #d35400, #F0DB4F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.btn-linear-gradient {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #111111 !important;
+    background: linear-gradient(45deg, #d35400, #F0DB4F);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-linear-gradient:hover {
+    background: linear-gradient(45deg, #F0DB4F, #d35400);
 }

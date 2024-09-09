@@ -3,6 +3,59 @@
 ---
 
 <section>
-    <p>Hola como estas</p>
-    <img src="images/jscode-logo.svg" alt="My Logo">
+    <div class="header">
+        <img src="images/jscode-logo.svg" alt="My Logo" />
+        <span class="logo gradient-text">JSCode</span>
+    </div>
+    <div class="text">
+        <h1>Lenguaje JavaScript</h1>
+        <p>
+            El curso principal contiene 2 partes que cubren JavaScript como
+            lenguaje de programación y el trabajo con un navegador. También hay
+            series adicionales de artículos temáticos.
+        </p>
+
+        <a href="/guides/intro/" class="btn-linear-gradient start">Empezar</a>
+    </div>
 </section>
+
+<style>
+    .header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .header img {
+        width: 100px;
+    }
+
+    .logo {
+        font-weight: bold;
+        font-size: 80px;
+    }
+
+    @media (min-width: 768px) {
+        .header img {
+            width: 150px;
+        }
+
+        .logo {
+            font-size: 130px;
+        }
+    }
+
+    .text {
+        text-align: center;
+        margin: 50px 0;
+    }
+
+    .text p{
+        margin-bottom: 40px;
+    }
+
+
+</style>
